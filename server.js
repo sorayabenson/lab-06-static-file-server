@@ -1,6 +1,5 @@
-// const app = require('./public/index.html');
-const app = require('./lib/app')
+const app = require('./app.js')
 
 app.listen(7890, () => {
-  console.log('boo!');
+  console.log('salaam!');
 });
