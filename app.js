@@ -14,8 +14,7 @@ const app = net.createServer(socket => {
                     body: data,
                     contentType: 'text/html',
                     status: '200 OK'
-                })))
-                .catch((err) => console.error(err));
+                })));
             
         } else {
             socket.end(createResponse({ 
