@@ -7,10 +7,10 @@ const app = net.createServer(socket => {
     socket.on('data', data => {
         const { path, method } = parseRequest(data.toString());
 
-        if(method === 'GET' && path === `/index.html`) {
+        if(method === 'GET' && path === '/index.html') {
             fs
-                .readFile('public/index.html', 'utf-8')
-                .then((data) => socket.write(createResponse({
+                .readFile(`public${path}`, 'utf-8')
+                .then((data) => socket.end(createResponse({
                     body: data,
                     contentType: 'text/html',
                     status: '200 OK'
