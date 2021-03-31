@@ -6,7 +6,7 @@ If a user hits your server at http://localhost:7890/index.html your server shoul
 
 ## work plan:
 - solution: 
-    Make a server that writes a file, reads the file, and displays the contents of the file to the user.
+    Make a server that writes reads the file and displays the contents of the file to the user.
 
 - breakdown:
     - build the file tree
