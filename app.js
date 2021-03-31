@@ -5,12 +5,12 @@ const createResponse = require('./utils/createResponse.js');
 
 const app = net.createServer(socket => {
     socket.on('data', data => {
-        const request = parseRequest(data.toString());
+        const { path, method } = parseRequest(data.toString());
 
-        if(request.method === 'GET' && request.path === `/index.html`) {
+        if(method === 'GET' && path === `/index.html`) {
             fs
                 .readFile('public/index.html', 'utf-8')
-                .then((data) => socket.end(createResponse({
+                .then((data) => socket.write(createResponse({
                     body: data,
                     contentType: 'text/html',
                     status: '200 OK'

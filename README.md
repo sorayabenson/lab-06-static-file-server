@@ -18,5 +18,7 @@ If a user hits your server at http://localhost:7890/index.html your server shoul
     - read a file
         - outcome: it reads the 'index.html'
         - test
+            - read
+            - error
         - code
         - refactor
