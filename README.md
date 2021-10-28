@@ -6,7 +6,7 @@ If a user hits your server at http://localhost:7890/index.html your server shoul
 
 ## work plan:
 - solution: 
-    Make a server that writes a file, reads the file, and displays the contents of the file to the user.
+    Make a server that writes reads the file and displays the contents of the file to the user.
 
 - breakdown:
     - build the file tree
@@ -15,23 +15,10 @@ If a user hits your server at http://localhost:7890/index.html your server shoul
             - index.html
         - server.js
             -7890
-    - write a file
-        - outcome: it writes a file with the name of 'ghost.md' and contents of 'oh no!'
-        - test
-        - code
-        - refactor
     - read a file
-        - outcome: it reads the 'ghost.md'
+        - outcome: it reads the 'index.html'
         - test
-        - code
-        - refactor
-    - copy a file
-        - outcome: it reads 'ghost.md', adds 'boo!' to the beginning of the data, and writes a new file 'ghost-boo.md'
-        - test
-        - code
-        - refactor
-    - index.html
-        - outcome: it will ultimately 'read ghost-boo.md', if file not found it responds with a not found message.
-        - test
+            - read
+            - error
         - code
         - refactor
